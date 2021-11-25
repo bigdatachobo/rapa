@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>첫 웹문서 만들기</title>
+</head>
+<body>
+
+    <form>
+        <input type="text" name="ID를 입력하세요" value="ID를 입력하세요" /><br/>
+        <input type="password" name="PW를 입력하세요" value="PW를 입력하세요" /><br/>
+        <input type="button" value="로그인">
+        <input type="button" value="회원가입" /><br/>
+    </form>
+
+    <div>
+        <h1>1.이미지 삽입 태그</h1>
+        <img src="./assets/img/dog.jpg" alt="귀여운 강아지" width="300">
+        <img src="./assets/img/cat.jpg" alt="예쁜 고양이" width="300">
+    </div>
+
+    <div>
+        <h1>2.오디오 삽입</h1>
+        <audio src="./assets/audio/leenalch_tiger.mp3" controls="controls"></audio>
+        <audio src="./assets/audio/Kalimba.mp3" controls="controls"></audio>
+        <audio controls="controls">
+            <source src="./assets/audio/Kalimba.mp3" type="audio/mp3">
+        </audio>
+        <audio controls="controls">
+            <source src="./assets/audio/Kalimba.ogg" type="audio/ogg">
+        </audio>
+    </div>
+
+    <div>
+        <h1>3.동영상 보여주기</h1>
+
+        <p>
+            <video width="320" controls="controls" poster="./assets/img/wildlife.png">
+                <source src="./assets/video/wildlife.mp4" type="video/mp4">
+            </video>
+        </p>
+
+        <video width="320" controls="controls" poster="./assets/img/cat.jpg" >
+            <source src="./assets/video/mov_bbb.mp4" type="video/mp4">
+        </video>
+
+        <p>
+            <iframe width="400" height="300" src="https://www.youtube.com/embed/62EjbCDPYlk"
+            title="YouTubevideoplayer" frameborder="0"
+            allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
+            allowfullscreen>
+            </iframe>
+        </p>
+
+    </div>
+
+    <div>
+        <h2><a href="#tit1">머신러닝 데이터 분석</a></h2>
+        <h2><a href="#tit2">웹프로그래밍</a></h2>
+        <h2><a href="#tit3">프론트 엔드</a></h2>
+        <h2><a href="#tit4">웹표준</a></h2>
+        <h2><a href="#tit5">HTML5</a></h2>
+        <h2><a href="#tit6">태그 요소(엘리먼트)</a></h2>
+        <h2><a href="#tit7">프론트 엔드</a></h2>
+        
+        <h2>자바스크립트</h2>
+        <p>
+            자바스크립트는 객체 기반의 스크립트 프로그래밍 언어이다. 
+            이 언어는 웹 브라우저 내에서 주로 사용하며, 
+            다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다. 
+            또한 Node.js와 같은 런타임 환경과 같이 서버 프로그래밍에도 사용되고 있다. 
+            위키백과
+            개발자: 넷스케이프, 모질라 재단, 
+            Ecma 인터내셔널
+            최근 버전 출시일: 2020년 6월
+            패러다임: 프로그래밍 
+            패러다임: 스크립트 언어, 
+            객체 지향 프로그래밍 (프로토타입 기반 프로그래밍), 
+            명령형 프로그래밍, 
+            함수형 프로그래밍, 
+            사건 기반 프로그래밍
+            설계자: 브렌던 아이크
+        </p>
+    </div>
+
+    <div>
+        
+        <h1><b>웹표준 종류</b></h1>
+        <ul>
+            <!-- &nbsp: 공란 의미-->
+            <li>&nbsp html5</li>
+            <li>css3</li>
+            <li>JavaScript</li>
+            <li>jquery</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>내가 좋아하는 과일</h2>
+        <ol>
+            <li>사과</li>
+            <li>배</li>
+            <li>키위</li>
+            <li>바나나</li>
+        </ol>
+
+    </div>
+    <!-- nav>ul.nav>li.nav-item$*  -->
+    
+    <a href="http://www.google.co.kr">google</a>
+    <a href="http://www.naver.com/">Naver</a>
+    <a href="https://www.daum.net/">Daum</a>
+
+    <nav>
+        <ol class="nav">
+            <li class="nav-item1"><a href="http://www.google.co.kr">google</a></li>
+            <li class="nav-item2"><a href="http://www.naver.com/">Naver</a></li>
+            <li class="nav-item3"><a href="https://www.daum.net/">Daum</a></li>
+        </ol>
+    </nav>
+
+    
+</body>
+</html>

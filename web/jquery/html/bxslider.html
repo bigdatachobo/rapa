@@ -1,0 +1,119 @@
+<html>
+
+<head>
+
+  <!-- bxslider -->
+  <!-- https://bxslider.com/ -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <!-- lightbox -->
+  <!-- https://lokeshdhakar.com/projects/lightbox2/#options -->
+  <link href="../lightbox2-2.11.3/src/css/lightbox.css" rel="stylesheet" />
+  <script src="../lightbox2-2.11.3/src/js/lightbox.js"></script>
+
+  <!-- 구글맵 -->
+  <script src="https://maps.googleapis.com/maps/api/js?key= &callback=initMap" async defer></script>
+  <script>
+
+    $(document).ready(function () {
+
+      $('.bxslider').bxSlider({
+        mode: 'fade',
+        captions: true,
+        slideWidth: 600
+      });
+
+      lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+      })
+    });
+
+  </script>
+
+  <style>
+    body {
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+    div.bx-controls-auto,
+    div.bx-pager {
+      display: none;
+    }
+
+    .bx-viewport {
+      text-align: center;
+    }
+
+    div.light {
+      text-align: center;
+    }
+
+    a.lb img {
+      width: 60px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="bxslider">
+    <div><img src="../assets/imgs/coffee1.jpg" title="Funky roots"></div>
+    <div><img src="../assets/imgs/coffee2.jpg" title="The long and winding road"></div>
+    <div><img src="../assets/imgs/coffee3.jpg" title="Happy trees"></div>
+    <div><img src="../assets/imgs/cat.jpg" title="Happy trees"></div>
+    <div><img src="../assets/imgs/img2.jpg" title="Happy trees"></div>
+  </div>
+
+  <div class="light">
+    <a class="lb" href="../assets/imgs/cat.jpg" data-lightbox="roadtrip">
+      <img src="../assets/imgs/cat.jpg" alt="">
+    </a>
+    <a class="lb" href="../assets/imgs/coffee1.jpg" data-lightbox="roadtrip">
+      <img src="../assets/imgs/coffee1.jpg" alt="">
+    </a>
+    <a class="lb" href="../assets/imgs/dog.jpg" data-lightbox="roadtrip">
+      <img src="../assets/imgs/dog.jpg" alt="">
+    </a>
+    <a class="lb" href="../assets/imgs/img5.jpg" data-lightbox="roadtrip">
+      <img src="../assets/imgs/img5.jpg" alt="">
+    </a>
+  </div>
+
+  <!-- 구글지도 -->
+  <div id="map">
+  </div>
+  <script>
+    //구글 지도
+    let map;
+    let image;
+    let marker;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        // 37.54629139592949, 126.88069030593695
+        // 37.54620234150478, 126.88067740981663
+        center: { lat: 37.54629139592949, lng: 126.88069030593695 }, //위도 경도
+        zoom: 16 //숫자클수록 지도가 자세히보임
+      });
+      image = new google.maps.MarkerImage('http://www.larva.re.kr/home/img/boximage3.png',
+        new google.maps.Size(100, 100),
+        '',
+        '',
+        new google.maps.Size(100, 100));
+      marker = new google.maps.Marker({
+        // 마커가 위치할 위도와 경도(변수)
+        position: { lat: 37.54629139592949, lng: 126.88069030593695 },
+        map: map,
+        icon: image, // 마커로 사용할 이미지(변수)
+        title: 'RAPA' // 마커에 마우스 포인트를 갖다댔을 때 뜨는 타이틀
+      });
+    }
+  </script>
+
+</body>
+
+</html>

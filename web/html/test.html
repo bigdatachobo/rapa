@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <title>Timer</title>
+
+  <script language="JavaScript">
+    {  // to isolate the scope of your code from any existing code.
+      const TICK_RESOLUTION = 1000; // in ms
+      const TIMER_LENGTH = 10;      // multiples of TICK_RESOLUTION
+      startBtn.value = TIMER_LENGTH * TICK_RESOLUTION;
+
+      startBtn.addEventListener("click", startStopTimer);
+      stopBtn.addEventListener("click", startStopTimer);
+      document.addEventListener("visibilityChange", tick);
+
+      let endTime, timeHdl;
+      function startStopTimer(event) {
+        endTime = performance.now() + Number(event.target.value);
+        tick();
+      }
+      function tick() {
+        clearTimeout(timeHdl);
+        var till = endTime - performance.now();
+        till = till <= 0 ? 0 : till;
+        if (till) {
+          if (document.visibilityState === "visible") {
+            stopBtn.disabled = false;
+            timeEl.textContent = (till / TICK_RESOLUTION + 1 | 0);
+          }
+          timeEl.dateTime = "PT0H0M" + (till / TICK_RESOLUTION + 1 | 0) + "S";
+          timeHdl = setTimeout(tick, (till % TICK_RESOLUTION) + 10);
+        } else {
+          timeEl.dateTime = "PT0H0M0S";
+          timeEl.textContent = 0;
+          stopBtn.disabled = true;
+        }
+      }
+    }
+
+  </script>
+  <style>
+    div {
+      font-family: arial;
+      font-size: 48px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <button id="startBtn" value="0">Start</button>
+  <button id="stopBtn" disabled value="0">Stop</button>
+  <div><time id="timeEl" dateTime="PT0H0M0S">0</time> seconds</div>
+
+</body>
+
+</html>

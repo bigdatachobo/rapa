@@ -1,0 +1,50 @@
+div{
+  background-color: coral;
+  width: 1000px;
+  height: 500px;
+  /* margin-bottom: 5px; */
+  margin: 5px;
+}
+
+div.box1{
+  border: blue solid 5px;
+}
+
+div.box2{
+  border: rgb(46, 235, 21) dotted 5px;
+}
+
+div.box h2 {
+  color: rgb(216, 22, 167);
+  font-size: 16pt;
+}
+
+li.sel {
+  font: 50px;
+  font-weight: bold;
+  color: aqua;
+}
+
+li.nosel {
+  font: 20px;
+  color: rgb(230, 24, 17);
+}
+/* h1, ul{
+  color: white;
+  background: rgb(218, 110, 23);
+}
+h1 {padding: 20px 0px;}
+li {
+  background: blueviolet;
+  list-style: none;
+  padding: 5px 10px;
+}
+.sel {
+  font-size: 20pt;
+  color: blue;
+  font-weight:bold;
+}
+.nosel {
+  color:burlywood;
+} */
+

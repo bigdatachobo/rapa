@@ -1,0 +1,34 @@
+body{
+    width: 1200px;
+    margin: 0 auto;
+
+}
+h1 {color: rgb(240, 14, 153);}
+
+div.gnb, div.container {
+    display: flex;
+}
+div.sub-box{
+    width: 500px;
+    
+}
+div.gnb > h3 {
+    width: 200px;
+    background-color: chartreuse;
+    padding: 10px 0px;
+    margin: 0px 5px 10px 0px;
+    font-size: 12px;
+    text-align: center;
+
+}
+div.gnb > h3 > a:hover{
+    /* 마우스 커서가 올라가 있는 동안 선택 */
+    color: magenta;
+}
+div.gnb > h3 > a:active{
+    /* 마우스를 클릭하고있는 동안 선택 */
+    color: rgb(22, 192, 214);
+}
+div.gnb > h3 > a:focus{
+    background-color: rgb(196, 31, 67);
+}
